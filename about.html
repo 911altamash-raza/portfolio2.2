@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Altamash - Professional Web Developer and UI/UX Designer based in India with skills in HTML, CSS, JavaScript, React, and design tools">
+    <meta name="keywords" content="web developer, UI/UX designer, portfolio, frontend developer, India, HTML, CSS, JavaScript, React">
+    <meta name="author" content="Altamash">
+    <meta property="og:title" content="About Altamash | Web Developer & Designer">
+    <meta property="og:description" content="Professional portfolio and background of Altamash, a Web Developer and UI/UX Designer">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com/about">
+    <meta property="og:image" content="https://yourportfolio.com/images/about-preview.jpg">
+    <meta name="theme-color" content="#1b1b2f">
+    
+    <title>About Altamash | Web Developer & UI/UX Designer</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" as="style">
+    <link rel="preload" href="assets/background.mp4" as="video" type="video/mp4">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://img.icons8.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Inline critical CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif, system-ui;
+            color: rgb(255, 255, 255);
+            overflow-x: hidden;
+            background-color: #1b1b2f;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #272626;
+            position: relative;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #00ffcc;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #00ffcc;
+            outline: none;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #b17cfb;
+            color: white;
+            padding: 8px;
+            z-index: 101;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header>
+        <div class="logo">Altamash</div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="Skill.html">Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <video autoplay muted loop playsinline id="background-video" poster="assets/fallback.webp" aria-hidden="true">
+        <source src="assets/background.mp4" type="video/mp4">
+        <source src="assets/background.webm" type="video/webm">
+    </video>
+
+    <main id="main-content" class="card">
+        <h1>About me</h1>
+        <div class="top">
+            <div class="content">
+                <p>Hi<br />
+                    My name is Altamash.<br />
+                    I am a Web developer based in India. I learn with experience through projects and studies.<br />
+                    My objective is to work in a creative environment to learn, develop, and contribute to exciting
+                    projects with my skills.</p>
+
+                <div class="section">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="info-box">
+                        <p>Email: <a href="mailto:altamashraza566@gmail.com">altamashraza566@gmail.com</a></p>
+                        <p>Phone: <a href="tel:+918652129479">+91 8652129479</a></p>
+                        <p><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+                           <a href="#" target="_blank" rel="noopener noreferrer">Behance</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="photo">
+                <img 
+                    src="https://dev-altamash-intro.pantheonsite.io/wp-content/uploads/2024/11/Screenshot-from-2024-11-21-14-23-23.png"
+                    alt="Altamash's professional profile photo"
+                    width="400"
+                    height="500"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <p>MH Saboo Siddik Technical High School and Junior College – UX/UI Design (2020 – 2025)</p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills" aria-label="Technical skills icons">
+                <img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML5" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/css3.png" alt="CSS3" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/react-native.png" alt="React" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/nodejs.png" alt="Node.js" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/git.png" alt="Git" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="Photoshop" loading="lazy" width="48" height="48">
+                <img src="https://img.icons8.com/color/48/adobe-xd.png" alt="Adobe XD" loading="lazy" width="48" height="48">
+            </div>
+        </div>
+
+        <div class="resume-container">
+            <a href="https://www.canva.com/design/DAGmqqV5JUU/T-ggh84R_t7yt6oJZxOaLA/view?utm_content=DAGmqqV5JUU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5bbac2a14a" target="_blank" rel="noopener noreferrer" class="resume-button">Download Resume</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Soft Skills</h2>
+            <div class="soft-skills">
+                <div class="info-box">Teamwork</div>
+                <div class="info-box">Communication</div>
+                <div class="info-box">Critical Thinking</div>
+                <div class="info-box">Time Management</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Interests</h2>
+            <div class="interests">
+                <div class="info-box">Design Trends</div>
+                <div class="info-box">Technology</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="language">
+                <div class="info-box">Hindi (Native)</div>
+                <div class="info-box">English (Proficient)</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="styles-about.css" media="print" onload="this.media='all'">
+    
+    <!-- JavaScript -->
+    <script src="about.js   " defer></script>
+</body>
+</html>

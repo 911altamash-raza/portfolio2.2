@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    header {
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background-color: #272626;
+      box-shadow: 0 2px 10px rgba(97, 91, 91, 0.6); 
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #00ffcc;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+    
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 120px 20px 40px; /* Added top padding for fixed header */
+    }
+
+    .contact-container {
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 600px;
+      margin-top: 60px; /* Space for fixed header */
+    }
+
+    /* Rest of your styles remain the same */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #555;
+      padding: 12px 8px;
+      color: white;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #aaa;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-bottom: 1px solid #fff;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    @media (min-width: 600px) {
+      .form-row {
+        flex-direction: row;
+      }
+      .form-row input {
+        width: 100%;
+      }
+    }
+
+    .submit-btn {
+      align-self: flex-end;
+      background: none;
+      border: 1px solid white;
+      border-radius: 50%;
+      color: white;
+      font-size: 24px;
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: white;
+      color: #0d0d0d;
+      transform: translateX(5px);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+    
+<header>
+    <div class="logo">Altamash</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Skill.html">Skills</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="contact-container">
+    <h2>Let's Get In Touch</h2>
+    <form action="https://formsubmit.co/altamashraza566@gmail.com" method="POST" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://altamash-raza-developer.netlify.app/">
+      <input type="hidden" name="_subject" value="New Contact Form Submission">
+      <input type="text" name="_honey" style="display:none">
+
+      <input type="text" name="name" placeholder="Full Name" required>
+
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone">
+      </div>
+
+      <textarea name="message" placeholder="Message" rows="4" required></textarea>
+
+      <button type="submit" class="submit-btn">→</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Altamash's Skills Dashboard showcasing web development and design expertise">
+  <title>Altamash | Skills Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="skill.css">
+</head>
+<bOdy></bOdy>
+<header>
+    <div class="logo" aria-label="Altamash">Altamash</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Skill.html" aria-current="page">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center p-8 relative" aria-labelledby="hero-heading">
+    <h1 id="hero-heading" class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Welcome to my Skills</h1>
+    <p class="text-lg sm:text-xl md:text-2xl max-w-2xl mb-8">Crafting beautiful, functional websites that grab attention.</p>
+    <button onclick="location.href='contact.html'" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-xl text-lg transition duration-300 glow focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900" aria-label="Request a website">
+      Request a Website
+    </button>
+    <canvas id="bgCanvas" aria-hidden="true"></canvas>
+  </section>
+
+  <!-- Skills Grid -->
+  <section class="p-8 bg-gray-900" aria-labelledby="skills-heading">
+    <h2 id="skills-heading" class="text-3xl md:text-4xl font-bold text-center mb-10">Tech Stack</h2>
+
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-xl font-semibold text-white mb-6 mt-4">Web Development</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center mb-10" role="list" aria-label="Web development skills">
+        <!-- Skill items -->
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12" alt="HTML5" loading="lazy">
+        </div>
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12" alt="CSS3" loading="lazy">
+        </div>
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12" alt="JavaScript" loading="lazy">
+        </div>
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 h-12" alt="React" loading="lazy">
+        </div>
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 h-12" alt="GitHub" loading="lazy">
+        </div>
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" class="w-12 h-12" alt="WordPress" loading="lazy">
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold text-white mb-6 mt-8">Graphic Design</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center" role="list" aria-label="Graphic design skills">
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" class="w-12 h-12" alt="Photoshop" loading="lazy">
+        </div>
+        <div class="skill-item" role="listitem">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" class="w-12 h-12" alt="Illustrator" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radar Chart Section -->
+  <section class="p-8 bg-gray-800" aria-labelledby="chart-heading">
+    <h2 id="chart-heading" class="sr-only">Skills Radar Chart</h2>
+    <div class="chart-container">
+      <canvas id="radarChart" aria-label="Skills radar chart showing proficiency in different areas"></canvas>
+    </div>
+  </section>
+
+  <!-- Skill Progress Section -->
+  <section class="main-section p-8 bg-gray-900">
+    <div class="container">
+      <div class="width-50">
+        <div class="skill">
+          <b>HTML</b>
+          <span>70%</span>
+          <div>
+            <span style="width:70%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>CSS</b>
+          <span>75%</span>
+          <div>
+            <span style="width:75%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>JavaScript</b>
+          <span>55%</span>
+          <div>
+            <span style="width:55%"></span>
+          </div>
+        </div>
+        <div class="skill">
+          <b>AI use</b>
+          <span>85%</span>
+          <div>
+            <span style="width:85%"></span>
+          </div>
+        </div>
+      </div>
+      <div class="width-50 flex flex-wrap justify-center gap-4">
+        <div role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="--value:55">R 55%</div>
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">Python 65%</div>
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:65">GitHub 65%</div>
+        <div role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="--value:55">CMD 55%</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="skills-section">
+    <h2>🛠️ My Skillset at a Glance</h2>
+    <div class="skills-grid">
+      <div class="skills-block">
+        <h3>💻 Core Web Skills</h3>
+        <ul>
+          <li><strong>HTML & CSS</strong> – Confident with modern, responsive layouts.</li>
+          <li><strong>JavaScript</strong> – Still learning, used for interactivity and logic.</li>
+          <li><strong>AI Tools</strong> – Strong in using AI for design, prototyping, and automation.</li>
+        </ul>
+      </div>
+      <div class="skills-block">
+        <h3>🧩 Supporting Tools & Languages</h3>
+        <ul>
+          <li><strong>Python & R</strong> – For scripting, data handling, and automations.</li>
+          <li><strong>GitHub</strong> – Managing projects, version control, and exploring open-source.</li>
+          <li><strong>CMD</strong> – For Git, CLI tools, and basic navigation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <!------SERVICE SECTION------>
+  <div class="main-section p-8 bg-gray-900">
+    <div class="container">
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fab fa-chrome"></i>
+          <h3>Web Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing portfolio student website</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fab fa-instagram"></i>
+          <h3>Web Design</h3>
+          <p>Lorem ipsum dolor sit amet, student graphic design portfolio websites euismod</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fab fa-reddit"></i>
+          <h3>Creative Design</h3>
+          <p>Lorem ipsum dolor sit amet, student portfolio website examples nonummy nibh euismod</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fas fa-video"></i>
+          <h3>Video Editing</h3>
+          <p>student portfolio website, consectetuer adipiscing elitsed nonummy nibh euismod</p>
+        </div>
+      </div>
+      <div class="width-50">
+        <div class="service-list">
+          <i class="fas fa-camera"></i>
+          <h3>Photography</h3>
+          <p>portfolio website examples for students adipiscing elitsed nonummy nibh euismod</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="p-8 bg-gray-800">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">MY PROJECTS</h2>
+    <div class="projects-container">
+     
+
+      <!-- Canva-like Design Tool -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Design Studio">
+        </div>
+        <div class="project-info">
+          <h3>Design Studio (Canva-like)</h3>
+          <p>A web-based graphic design tool with drag-and-drop functionality and templates for various media.</p>
+          <div class="project-tech">   
+            <span class="tech-item">Printers</span>
+            <span class="tech-item">canva</span>
+            <span class="tech-item">photo shop</span>
+           
+          </div>
+          <div class="project-links">
+            <a href="projects/design-studio/index.html" class="project-link live-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://www.canva.com/design/DAGOYWTCE2g/QLV_5PHcq2iwCVX65gskig/edit?continue_in_browser=true" class="project-link source-code"><i class="fab fa-canva"></i> Source</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portfolio Website -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Portfolio Website">
+        </div>
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A modern, responsive portfolio website showcasing skills, projects, and professional experience.</p>
+          <div class="project-tech">
+            <span class="tech-item">HTML</span>
+            <span class="tech-item">CSS</span>
+            <span class="tech-item">JavaScript</span>
+            <span class="tech-item">GSAP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://altamash-raza-developer.netlify.app" class="project-link live-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="https://github.com/911altamash-raza/portfolio" class="project-link source-code"><i class="fab fa-github"></i> Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="skill.js"></script>
+    </bOdy>
+   </HTML>

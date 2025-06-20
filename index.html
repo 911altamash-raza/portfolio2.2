@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Altamash - Web Developer & UI/UX Designer showcasing skills in frontend development, creative coding, and design">
+  <meta name="keywords" content="web developer, UI/UX designer, portfolio, frontend developer, creative coder, Altamash">
+  <meta name="author" content="Altamash">
+  <meta property="og:title" content="Altamash | Web Developer & UI/UX Designer">
+  <meta property="og:description" content="Professional portfolio showcasing web development and design expertise">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourportfolio.com">
+  <meta property="og:image" content="https://yourportfolio.com/images/social-preview.jpg">
+  <meta name="theme-color" content="#0d0d0d">
+  
+  <title>Altamash | Web Developer & UI/UX Designer</title>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
+  <link rel="preload" href="styles.css" as="style">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- CSS with fallbacks -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Inline critical CSS -->
+  <style>
+    :root {
+      --main-color: #f84c4c;
+      --text-light: #aaa;
+      --bg: #0d0d0d;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif, system-ui;
+      color: white;
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+    
+    /* Header minimal styles */
+    header {
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 100;
+      background-color: #272626;
+    }
+    
+    /* Ensure content is visible during loading */
+    .container, header {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Skip to content link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--main-color);
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+  
+  <!-- Non-critical CSS -->
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Deferred JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Animation Overlay -->
+  <div id="overlay" aria-hidden="true">
+    <div id="door"></div>
+  </div>
+
+  <header>
+    <div class="logo">Altamash</div>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Skill.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="main-title">
+      PORTFOLIO <br> 
+      Altamash
+    </div>
+    <div class="subtext">
+      <span class="left">Graphic Design</span>
+      <span class="right">Coding</span>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero container">
+      <div class="left">
+        <h1>Hi, <br> I'm <span class="highlight">Altamash</span></h1>
+        <div class="typing" id="typed-text" aria-live="polite"></div>
+
+        <div class="buttons">
+          <button class="primary-btn">Hire Me</button>
+          <button class="secondary-btn">Download CV</button>
+        </div>
+
+        <div class="social">
+          <a href="https://github.com/911altamash-raza" aria-label="github"><i class="fa-brands fa-github"></i></a>
+          <a href="https://x.com/altamashra57136" aria-label="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://dribbble.com/tazrin" aria-label="Dribbble"><i class="fa-brands fa-square-dribbble"></i></a>
+        </div>
+      </div>
+
+      <div class="center-image">
+        <img 
+          src="https://dev-altamash-intro.pantheonsite.io/wp-content/uploads/2024/11/Screenshot-from-2024-11-21-14-23-23.png" 
+          alt="Portrait of Altamash"
+          width="360"
+          height="480"
+          loading="lazy"
+        >
+      </div>
+    </section>
+  </main>
+
+  <div class="chat-button" aria-label="Chat with me">
+    <a href="https://wa.me/+918652129479" target="_blank" rel="noopener noreferrer">
+      Let's Chat<span aria-hidden="true">💬</span>
+    </a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* Background Video */
+video#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(28, 27, 41, 0.85);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    width: 90%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    color: #b17cfb;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 20px;
+}
+
+h2.section-title {
+    font-size: 1.4rem;
+    color: #89f7fe;
+    margin-bottom: 15px;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.photo {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.02);
+}
+
+.content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+/* Skills Grid */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.skills img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.skills img:hover {
+    transform: scale(1.1);
+}
+
+/* Info Boxes */
+.info-box {
+    background: #2a293a;
+    border-radius: 10px;
+    padding: 12px 20px;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background: #3a394a;
+}
+
+/* Links */
+a {
+    color: #89f7fe;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:focus {
+    color: #b17cfb;
+    outline: 2px solid #b17cfb;
+    outline-offset: 2px;
+}
+
+/* Resume Button */
+.resume-container {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #7c7c7c, #2a4547);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px #b17cfb66;
+    cursor: pointer;
+}
+
+.resume-button:hover,
+.resume-button:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(138, 138, 138, 0.6);
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        padding: 20px;
+        margin: 30px auto;
+    }
+
+    .info-box {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo {
+        min-width: 100%;
+    }
+    
+    .skills img {
+        height: 35px;
+    }
+    
+    .resume-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
